@@ -27,8 +27,6 @@ images/Screen Recording 2026-03-10 144738.mp4
 images/Screenshot 2026-03-10 144423.png
 
 
----
-
 **How to Play**
 
 1. Choose **Play With Friend** or **Play With Computer**
@@ -39,7 +37,7 @@ images/Screenshot 2026-03-10 144423.png
 
 **Live Demo**
 
-
+ https://komalaher1410-glitch.github.io/Tic-Tac-Toe-ultimate/
 
 
 **Author**

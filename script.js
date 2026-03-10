@@ -12,20 +12,17 @@ let soundEnabled = true;
 
 // Apply volume to all sounds
 function updateVolume(){
-    bgMusic.volume = masterVolume * 0.6;
-    winSound.volume = masterVolume;
-    clickSound.volume = masterVolume;
+    if(bgMusic) bgMusic.volume = masterVolume * 0.6;
+    if(winSound) winSound.volume = masterVolume;
+    if(clickSound) clickSound.volume = masterVolume;
 }
 
 updateVolume();
-//start music after first click by user
-document.addEventListener("click", function () {
-    bgMusic.play();
-}, { once: true });
-// Start background music after first interaction (browser rule)
+
+// Start background music after first user interaction
 document.addEventListener("click", () => {
-    if (bgMusic.paused && soundEnabled) {
-        bgMusic.play();
+    if (bgMusic && bgMusic.paused && soundEnabled) {
+        bgMusic.play().catch(()=>{});
     }
 }, { once: true });
 
@@ -35,7 +32,7 @@ if(toggleSoundBtn){
         soundEnabled = !soundEnabled;
 
         if(soundEnabled){
-            bgMusic.play();
+            bgMusic.play().catch(()=>{});
             toggleSoundBtn.textContent = "🔊 Sound ON";
         } else {
             bgMusic.pause();
@@ -66,11 +63,11 @@ if(volumeDownBtn){
     };
 }
 
-// Safe play function
+// 🔊 Safe play function
 function playSound(sound){
-    if(soundEnabled){
+    if(soundEnabled && sound){
         sound.currentTime = 0;
-        sound.play();
+        sound.play().catch(()=>{});
     }
 }
 
@@ -150,6 +147,7 @@ function makeMove(index, player){
         updateScore();
         gameActive = false;
 
+        // 🔊 Play winner sound
         playSound(winSound);
 
         winnerText.textContent = `🏆 Player ${player} Wins!`;
@@ -172,11 +170,15 @@ function checkWinner(player){
         combo.every(i=>state[i]===player)
     );
 }
-//create stop function
+
+// Stop winner music
 function stopWinMusic() {
-    winSound.pause();
-    winSound.currentTime = 0;
+    if(winSound){
+        winSound.pause();
+        winSound.currentTime = 0;
+    }
 }
+
 function updateScore(){
     scoreX.textContent = scores.X;
     scoreO.textContent = scores.O;
@@ -202,17 +204,13 @@ startPVP.onclick = ()=> startGame(false);
 startAI.onclick = ()=> startGame(true);
 
 playAgainBtn.onclick = ()=> {
-    stopWinMusic();        // 👈 STOP winner music
+    stopWinMusic();
     playSound(clickSound);
     startGame(vsAI);
 };
 
-// backToMenu.onclick = ()=> {
-//     playSound(clickSound);
-//     showPage(startPage);
-// };
 backToMenu.onclick = ()=> {
-    stopWinMusic();        // 👈 STOP winner music
+    stopWinMusic();
     playSound(clickSound);
     showPage(startPage);
 };

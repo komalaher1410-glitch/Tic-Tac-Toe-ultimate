@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe Ultimate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- START PAGE -->
+<div class="page active" id="startPage">
+    <h1>🎮 Tic Tac Toe</h1>
+    <button id="startPVP">Play With Friend</button>
+    <button id="startAI">Play With Computer</button>
+</div>
+
+<!-- GAME PAGE -->
+<div class="page" id="gamePage">
+    <h1>Tic Tac Toe</h1>
+
+    <div class="scoreboard">
+        X: <span id="scoreX">0</span> |
+        O: <span id="scoreO">0</span>
+    </div>
+    <div class="audio-controls">
+    <button id="toggleSound">🔊 Sound ON</button>
+    <button id="volumeUp">🔼 Volume +</button>
+    <button id="volumeDown">🔽 Volume -</button>
+    </div>
+
+    <div id="status"></div>
+    <div class="board" id="board"></div>
+
+    <button id="backToMenu">Back To Menu</button>
+</div>
+
+<!-- WINNER PAGE -->
+<div class="page" id="winnerPage">
+    <h1 id="winnerText"></h1>
+
+    <div class="stickers">
+        🎉 🎊 🏆 ⭐ 🎈
+    </div>
+
+    <button id="playAgain">Play Again</button>
+</div>
+
+<!-- 🔊 AUDIO FILES -->
+<audio id="bgMusic" src="D:\komal\tic-toc-toe game\tic_tac_toe_ultimate\music\background2.mp3" loop></audio>
+<audio id="winSound" src="D:\komal\tic-toc-toe game\tic_tac_toe_ultimate\music\winner2.mp3"></audio>
+<audio id="clickSound" src="D:\komal\tic-toc-toe game\tic_tac_toe_ultimate\music\click4.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

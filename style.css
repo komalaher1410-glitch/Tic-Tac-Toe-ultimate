@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    text-align: center;
+}
+
+.page {
+    display: none;
+    padding-top: 50px;
+}
+
+.page.active {
+    display: block;
+    animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #00c853;
+    color: white;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: rgba(255,255,255,0.1);
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.stickers {
+    font-size: 40px;
+    margin: 20px;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from {transform: translateY(0);}
+    to {transform: translateY(-10px);}
+}
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #141e30, #243b55, #0f2027, #2c5364);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.page {
+    display: none;
+    padding-top: 50px;
+}
+
+.page.active {
+    display: block;
+    animation: fade 0.6s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+button {
+    padding: 12px 28px;
+    margin: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    background: linear-gradient(45deg, #00c853, #00e676);
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,255,150,0.3);
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,255,150,0.6);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    gap: 15px;
+    justify-content: center;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.cell {
+    width: 110px;
+    height: 110px;
+    background: rgba(255,255,255,0.12);
+    font-size: 2.8rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.1);
+}
+
+.cell:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+
+.x-style {
+    color: #00e5ff;
+    text-shadow: 0 0 15px #00e5ff;
+}
+
+.o-style {
+    color: #ff4081;
+    text-shadow: 0 0 15px #ff4081;
+}
+
+#status {
+    font-size: 22px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+#winnerText {
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: 0 0 20px gold;
+    animation: winnerGlow 1.5s infinite alternate;
+}
+
+@keyframes winnerGlow {
+    from { text-shadow: 0 0 10px gold; }
+    to { text-shadow: 0 0 35px orange; }
+}
+
+.stickers {
+    font-size: 50px;
+    margin: 25px;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-12px); }
+}
+
+.scoreboard {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+@media (max-width: 500px) {
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        gap: 10px;
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+} */

@@ -148,6 +148,11 @@ function makeMove(index, player){
         gameActive = false;
 
         playSound(winSound); // winner music
+        confetti({
+        particleCount:150,
+        spread:90,
+        origin:{ y:0.6 }
+        });
 
         winnerText.textContent = `🏆 Player ${player} Wins!`;
         showPage(winnerPage);

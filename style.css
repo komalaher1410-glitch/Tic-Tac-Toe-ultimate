@@ -55,6 +55,10 @@ button {
 .cell:hover {
     background: rgba(255,255,255,0.2);
 }
+.winner-image img{
+    width:120px;
+    margin-top:20px;
+}
 
 .stickers {
     font-size: 40px;

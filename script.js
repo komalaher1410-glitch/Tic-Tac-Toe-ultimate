@@ -19,7 +19,7 @@ function updateVolume(){
 
 updateVolume();
 
-// Start background music after first user interaction
+// Start background music after first interaction (browser rule)
 document.addEventListener("click", () => {
     if (bgMusic && bgMusic.paused && soundEnabled) {
         bgMusic.play().catch(()=>{});
@@ -32,10 +32,10 @@ if(toggleSoundBtn){
         soundEnabled = !soundEnabled;
 
         if(soundEnabled){
-            bgMusic.play().catch(()=>{});
+            if(bgMusic) bgMusic.play().catch(()=>{});
             toggleSoundBtn.textContent = "🔊 Sound ON";
         } else {
-            bgMusic.pause();
+            if(bgMusic) bgMusic.pause();
             toggleSoundBtn.textContent = "🔇 Sound OFF";
         }
     };
@@ -147,8 +147,7 @@ function makeMove(index, player){
         updateScore();
         gameActive = false;
 
-        // 🔊 Play winner sound
-        playSound(winSound);
+        playSound(winSound); // winner music
 
         winnerText.textContent = `🏆 Player ${player} Wins!`;
         showPage(winnerPage);
@@ -171,7 +170,7 @@ function checkWinner(player){
     );
 }
 
-// Stop winner music
+// stop winner music
 function stopWinMusic() {
     if(winSound){
         winSound.pause();

@@ -23,8 +23,8 @@ This game includes sound effects, scoreboard, AI opponent, and animated winner s
 - JavaScript
 
  **Project Preview**
-
-![Game Screenshot](images/game.png)
+images/Screen Recording 2026-03-10 144738.mp4
+(images/game.png)
 
 ---
 

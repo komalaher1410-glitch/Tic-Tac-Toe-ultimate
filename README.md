@@ -44,5 +44,6 @@ images/Screenshot 2026-03-10 144423.png
 Komal Aher
 Frontend Developer  
 Looking for Web Development Opportunities.
+https://github.com/komalaher1410-glitch
 
 GitHub: https://github.com/komalaher14

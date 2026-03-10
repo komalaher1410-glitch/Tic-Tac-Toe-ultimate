@@ -24,7 +24,8 @@ This game includes sound effects, scoreboard, AI opponent, and animated winner s
 
  **Project Preview**
 images/Screen Recording 2026-03-10 144738.mp4
-(images/game.png)
+images/Screenshot 2026-03-10 144423.png
+
 
 ---
 

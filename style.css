@@ -55,11 +55,6 @@ button {
 .cell:hover {
     background: rgba(255,255,255,0.2);
 }
-.winner-image img{
-    width:120px;
-    margin-top:20px;
-}
-
 .stickers {
     font-size: 40px;
     margin: 20px;
@@ -230,3 +225,25 @@ button:active {
         font-size: 28px;
     }
 } */
+.winner-image{
+    margin:20px 0;
+}
+
+.winner-image img{
+    width:120px;
+    animation: trophyPop 0.6s ease;
+}
+
+@keyframes trophyPop{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+
+
+

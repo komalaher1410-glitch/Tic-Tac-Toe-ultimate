@@ -18,7 +18,10 @@ function updateVolume(){
 }
 
 updateVolume();
-
+//start music after first click by user
+document.addEventListener("click", function () {
+    bgMusic.play();
+}, { once: true });
 // Start background music after first interaction (browser rule)
 document.addEventListener("click", () => {
     if (bgMusic.paused && soundEnabled) {
